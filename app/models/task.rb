@@ -6,6 +6,8 @@ class Task < ApplicationRecord
 
   validate :validate_name_not_imcluding_comma
 
+  belongs_to :user
+  
   private
 
   def set_nameless_name
