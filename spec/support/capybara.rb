@@ -1,6 +1,8 @@
-require 'capybara/rspec'
+require "selenium-webdriver"
 
-Capybara.configure do |config|
-  config.default_driver = :selenium_chrome # 使用するドライバーを設定
-  config.default_max_wait_time = 5 # 要素が見つかるまで待つ最大時間を設定
+Capybara.register_driver :selenium_chrome_headless do |app|
+  driver = Selenium::WebDriver.for :chrome
+  Selenium::WebDriver::Chrome::Module.driver_path = "/Users/tanamaru/Downloads/chromedriver"
 end
+
+Capybara.javascript_driver = :selenium_chrome_headless
