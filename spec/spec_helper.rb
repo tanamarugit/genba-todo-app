@@ -15,6 +15,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'capybara/rspec'
+require 'factory_bot'
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
 
 Capybara.register_driver :selenium_chrome_headless do |app|
   options = Selenium::WebDriver::Chrome::Options.new
