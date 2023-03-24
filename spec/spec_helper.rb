@@ -15,7 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'capybara/rspec'
-require 'factory_bot'
+require 'factory_bot_rails'
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 end
