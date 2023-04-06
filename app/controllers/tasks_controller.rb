@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   def destroy
     @task = current_user.tasks.find(params[:id])
     @task.destroy
-    head :no_content
+    # head :no_content
   end
 
   private
