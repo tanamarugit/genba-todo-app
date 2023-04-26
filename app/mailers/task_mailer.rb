@@ -10,3 +10,4 @@ class TaskMailer < ApplicationMailer
     )
   end
 end
+
