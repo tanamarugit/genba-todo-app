@@ -63,4 +63,5 @@ Rails.application.configure do
 
   config.logger = Logger.new('log/development.log', 'daily')
   config.custom_logger = Logger.new('log/custom.log', 'weekly')
+  config.active_job.queue_adapter = :sidekiq
 end
